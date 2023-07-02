@@ -23,24 +23,6 @@
     <header>
         <div class="pp-header ">
 
-            {{-- @if (Route::has('login'))
-                <div class=" hidden absolute top-0 right-0 px-6 py-4  sm:block ">
-
-
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                        {{-- <li class="nav-item active"><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a> --}}
-                    {{-- @else --}}
-                    {{-- <li class="nav-item active"><a class="nav-link" href="{{ route('login') }}">Log in</a> --}}
-{{--
-                        <a href="{{ route('login') }}" class=" btn btn-primary ">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class=" btn btn-primary">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif  --}}
             <nav class=" jus navbar navbar-expand-lg navbar-light justify-content-end">
                 <div class="container"><a href="/"><img src="/images/favicon.png" alt="Logo"></a><a class="navbar-brand" href="/">Photo Perfect</a>
 
