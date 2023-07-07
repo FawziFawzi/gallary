@@ -29,16 +29,12 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="/about">About</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a>
-                            </li>
-                            @if (Route::has('login'))
 
+                            <x-mainnavigation name='home' href="{{ route('home') }}">Home</x-mainnavigation>
+                            <x-mainnavigation name='blog' href="{{ route('blog') }}">Blog</x-mainnavigation>
+                            <x-mainnavigation name='about' href="{{ route('about') }}">about</x-mainnavigation>
+                            <x-mainnavigation name='contact' href="{{ route('contact') }}">Contact</x-mainnavigation>
+                            @if (Route::has('register'))
 
 
                                 @auth
@@ -49,7 +45,6 @@
                                         <form action="/logout" method="post">
                                             @csrf
                                             <li class="nav-item "><button type="submit" class="bg-secondary mt-1 nav-link rounded text-sm text-white pl-1">Logout</button></li>
-
 
                                         </form>
 
@@ -69,6 +64,7 @@
                 </div>
             </nav>
         </div>
+
     </header>
 
 

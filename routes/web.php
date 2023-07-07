@@ -26,19 +26,22 @@ Route::post('newsletter',NewsletterController::class);
 |
 */
 
-Route::get('/', [photosController::class, 'index']);
+Route::get('/', [photosController::class, 'index'])->name('home');
 
 
-Route::get('contact', function () {
+Route::get('/contact', function () {
     return view('design.contact');
-});
-Route::get('blog',[PostsController::class ,'index']);
+})->name('contact');
+Route::get('/about', function () {
+    return "About us";
+})->name('about');
+Route::get('/blog',[PostsController::class ,'index'])->name('blog');
 
-Route::get('blog-post/{post:post_slug}',[PostsController::class,'show']);
+Route::get('/blog-post/{post:post_slug}',[PostsController::class,'show']);
 
-Route::get('postTags/{tags:slug}',[PostTagsController::class ,'index']);
+Route::get('/postTags/{tags:slug}',[PostTagsController::class ,'index']);
 
-Route::post('posts/{post:post_slug}/comments',[CommentsController::class,'store']);
+Route::post('/posts/{post:post_slug}/comments',[CommentsController::class,'store']);
 
 
 
