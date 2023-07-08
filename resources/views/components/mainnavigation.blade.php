@@ -2,13 +2,9 @@
 
 
 @php
-
-
     $classes = $name == \Illuminate\Support\Facades\Route::currentRouteName()? 'nav-item active'
     : 'nav-item';
-//    $classes= ($name ?? false)
-//    ? 'nav-item active'
-//    : 'nav-item'
+
 @endphp
 
 <li {{ $attributes->merge(['class'=> $classes]) }}>
